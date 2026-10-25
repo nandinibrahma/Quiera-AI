@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#212121">
+
+  <title>Quiera AI</title>
+  <meta name="description" content="Meet Quiera AI, your personal AI assistant. Ask questions, explore ideas, and create something amazing.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-header">
+        <a href="#" class="brand" aria-label="Quiera AI home">
+          <span class="brand-icon">✳</span>
+          <span class="brand-name">Quiera AI</span>
+        </a>
+
+        <button
+          class="icon-button"
+          id="close-sidebar"
+          aria-label="Close sidebar"
+          type="button"
+        >
+          ✕
+        </button>
+      </div>
+
+      <button class="new-chat-button" id="new-chat" type="button">
+        <span class="plus-icon">＋</span>
+        <span>New chat</span>
+      </button>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">YOUR CHATS</p>
+        <nav id="chat-history" class="chat-history" aria-label="Chat history">
+          <!-- Chat history is added by script.js -->
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="profile-avatar">Q</div>
+
+        <div class="profile-info">
+          <span class="profile-name">Quiera AI</span>
+          <span class="profile-status">Your AI assistant</span>
+        </div>
+
+        <span class="status-indicator" title="Interface ready"></span>
+      </div>
+
+    </aside>
+
+    <!-- Main chat area -->
+    <main class="main-content">
+
+      <!-- Top navigation -->
+      <header class="topbar">
+
+        <div class="topbar-left">
+          <button
+            class="icon-button menu-button"
+            id="open-sidebar"
+            type="button"
+            aria-label="Open sidebar"
+          >
+            ☰
+          </button>
+
+          <a href="#" class="mobile-brand">✳ Quiera AI</a>
+        </div>
+
+        <div class="topbar-center">
+          <span class="model-name">Quiera AI</span>
+          <span class="model-badge">AI Assistant</span>
+        </div>
+
+        <div class="topbar-right">
+          <a
+            class="github-link"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit GitHub"
+          >
+            GitHub ↗
+          </a>
+        </div>
+
+      </header>
+
+      <!-- Welcome screen -->
+      <section class="welcome-screen" id="welcome-screen">
+
+        <div class="welcome-logo" aria-hidden="true">
+          <span>✳</span>
+        </div>
+
+        <h1>What can I help with?</h1>
+
+        <p class="welcome-description">
+          Ask anything. Explore ideas. Make something amazing.
+        </p>
+
+        <!-- Suggested prompts -->
+        <div class="suggestion-grid">
+
+          <button
+            class="suggestion-card"
+            type="button"
+            data-prompt="Explain artificial intelligence in simple words."
+          >
+            <span class="suggestion-icon">✦</span>
+            <span class="suggestion-title">Learn something</span>
+            <span class="suggestion-description">
+              Understand any topic
+            </span>
+          </button>
+
+          <button
+            class="suggestion-card"
+            type="button"
+            data-prompt="Give me five creative project ideas I can build as a beginner."
+          >
+            <span class="suggestion-icon">◇</span>
+            <span class="suggestion-title">Explore ideas</span>
+            <span class="suggestion-description">
+              Brainstorm something new
+            </span>
+          </button>
+
+          <button
+            class="suggestion-card"
+            type="button"
+            data-prompt="Write a simple Python program and explain how it works."
+          >
+            <span class="suggestion-icon">&lt;/&gt;</span>
+            <span class="suggestion-title">Write code</span>
+            <span class="suggestion-description">
+              Build and debug projects
+            </span>
+          </button>
+
+          <button
+            class="suggestion-card"
+            type="button"
+            data-prompt="Help me make a simple, productive daily routine."
+          >
+            <span class="suggestion-icon">◷</span>
+            <span class="suggestion-title">Plan something</span>
+            <span class="suggestion-description">
+              Turn ideas into action
+            </span>
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- Conversation messages -->
+      <section
+        class="messages-container"
+        id="messages-container"
+        aria-label="Conversation"
+        aria-live="polite"
+        aria-relevant="additions"
+      >
+        <!-- Messages are inserted by script.js -->
+      </section>
+
+      <!-- Message composer -->
+      <footer class="chat-footer">
+
+        <form class="chat-form" id="chat-form">
+
+          <textarea
+            id="message-input"
+            name="message"
+            placeholder="Message Quiera AI..."
+            aria-label="Type your message"
+            rows="1"
+            maxlength="4000"
+            required
+          ></textarea>
+
+          <div class="composer-toolbar">
+
+            <div class="composer-tools">
+              <span class="composer-brand-icon">✳</span>
+              <span class="composer-hint">Ask Quiera anything</span>
+            </div>
+
+            <div class="composer-actions">
+              <span class="keyboard-hint">Enter ↵</span>
+
+              <button
+                type="submit"
+                class="send-button"
+                id="send-button"
+                aria-label="Send message"
+                title="Send message"
+              >
+                <span aria-hidden="true">↑</span>
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+
+        <p class="disclaimer">
+          Quiera AI can make mistakes. Verify important information.
+        </p>
+
+      </footer>
+
+    </main>
+
+  </div>
+</body>
+</html>
