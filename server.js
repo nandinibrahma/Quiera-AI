@@ -20,9 +20,7 @@ const openai = new OpenAI({
 });
 
 // Test route
-app.get("/", (req, res) => {
-  res.send("Quiera AI backend is running!");
-});
+app.use(express.static("."));
 
 // Chat endpoint
 app.post("/api/chat", async (req, res) => {
